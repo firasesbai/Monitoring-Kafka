@@ -24,6 +24,7 @@ services:
         - zookeeper
       ports:
         - "9092:9092"
+        - "19092:19092"
         ## JMX ##
         - "7071:7071"
       environment:
@@ -50,6 +51,7 @@ services:
         - zookeeper
       ports:
         - "9093:9093"
+        - "19093:19093"
         ## JMX ##
         - "7071:7072"
       environment:
@@ -76,6 +78,7 @@ services:
         - zookeeper
       ports:
         - "9094:9094"
+        - "19094:19094"
         ## JMX ##
         - "7071:7073"
       environment:
