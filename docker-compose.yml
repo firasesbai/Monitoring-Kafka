@@ -3,21 +3,27 @@ version: '2'
 services:
 
   zookeeper:
-      restart: always
-      image: "zookeeper:3.5"
+      build:
+        context: .
+        dockerfile: Dockerfile-zookeeper
       hostname: zookeeper
       container_name: zookeeper
       ports:
         - "2181:2181"
+        - "7000:7000"
+      environment:
+        - JVMFLAGS: "-javaagent:/usr/jmx_prometheus_javaagent-0.10.jar=7000:/usr/prom-jmx-agent-config.yml"
       volumes:
         - ./zoo1/data:/data
         - ./zoo1/datalog:/datalog
         - ./zoo1/logs:/logs
+      restart: always
       network_mode: "host"
       
   kafka-1:
       build:
         context: .
+        dockerfile: Dockerfile-kafka
       image: kafka-with-jmx:5.4.0
       container_name: kafka-1
       depends_on:
