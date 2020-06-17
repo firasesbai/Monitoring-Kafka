@@ -12,7 +12,7 @@ services:
         - "2181:2181"
         - "7000:7000"
       environment:
-        - JVMFLAGS: "-javaagent:/usr/jmx_prometheus_javaagent-0.10.jar=7000:/usr/prom-jmx-agent-config.yml"
+        - JVMFLAGS: "-javaagent:/usr/jmx_prometheus_javaagent-0.10.jar=7000:/usr/prom-jmx-agent-zoo-config.yml"
       volumes:
         - ./zoo1/data:/data
         - ./zoo1/datalog:/datalog
