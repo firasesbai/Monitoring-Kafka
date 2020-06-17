@@ -41,7 +41,7 @@ services:
         KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
         KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181/kafka-cluster
         ## JMX ##
-        KAFKA_OPTS: -javaagent:/usr/jmx_prometheus_javaagent-0.10.jar=7071:/usr/prom-jmx-agent-config.yml
+        KAFKA_OPTS: -javaagent:/usr/jmx_prometheus_javaagent-0.10.jar=7071:/usr/prom-jmx-agent-kafka-config.yml
         ## logging ##
         KAFKA_LOG4J_ROOT_LOGLEVEL: INFO
         KAFKA_TOOLS_LOG4J_LOGLEVEL: INFO
@@ -68,7 +68,7 @@ services:
         KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
         KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181/kafka-cluster
         ## JMX ##
-        KAFKA_OPTS: -javaagent:/usr/jmx_prometheus_javaagent-0.10.jar=7071:/usr/prom-jmx-agent-config.yml
+        KAFKA_OPTS: -javaagent:/usr/jmx_prometheus_javaagent-0.10.jar=7071:/usr/prom-jmx-agent-kafka-config.yml
         ## logging ##
         KAFKA_LOG4J_ROOT_LOGLEVEL: INFO
         KAFKA_TOOLS_LOG4J_LOGLEVEL: INFO
@@ -95,7 +95,7 @@ services:
         KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
         KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181/kafka-cluster
         ## JMX ##
-        KAFKA_OPTS: -javaagent:/usr/jmx_prometheus_javaagent-0.10.jar=7071:/usr/prom-jmx-agent-config.yml
+        KAFKA_OPTS: -javaagent:/usr/jmx_prometheus_javaagent-0.10.jar=7071:/usr/prom-jmx-agent-kafka-config.yml
         ## logging ##
         KAFKA_LOG4J_ROOT_LOGLEVEL: INFO
         KAFKA_TOOLS_LOG4J_LOGLEVEL: INFO
