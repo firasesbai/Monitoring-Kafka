@@ -26,9 +26,9 @@ The following URLs will be availabe:
 
 ## To Dos
 The repository could be updated in the future with the following actions to extend and improve the solution:
-* Extend the monitoring to include Zookeeper
-* Extend the monitoring to include Kafka Producers and Consumers. 
-* Enable alerting and email notifications for critical metrics in Grafana. This will require the update of some panels since currently only the graph panel visualization supports alerts.
+- [x] Extend the monitoring to include Zookeeper
+- [ ] Extend the monitoring to include Kafka Producers and Consumers. 
+- [ ] Enable alerting and email notifications for critical metrics in Grafana. This will require the update of some panels since currently only the graph panel visualization supports alerts.
 
 ## Contributing
 Any feedback, bug reports, ideas or improvements are greatly appreciated.  
