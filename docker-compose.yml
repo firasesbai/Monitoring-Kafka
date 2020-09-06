@@ -103,7 +103,31 @@ services:
         - ./kafka3/kafka-data:/var/lib/kafka/data
       network_mode: "host"
       restart: always
-
+  
+  kafka-connect:
+      build:
+      context: .
+      dockerfile: Dockerfile-kafka-connect
+      hostname: kafka-connect
+      container_name: kafka-connect
+      depends_on:
+        - kafka-1
+        - kafka-2
+        - kafka-3
+      ports:
+        - "8083:8083"
+        ## JMX ##
+        - "7074:7071"
+      environment:
+        CONNECT_BOOTSTRAP_SERVERS: kafka-1:19092,kafka-2:19093,kafka-3:19094
+        CONNECT_REST_ADVERTISED_HOST_NAME: kafka-connect
+        CONNECT_REST_PORT: 8083
+        CONNECT_ZOOKEEPER_CONNECT: zookeeper:2181
+        ## JMX ##
+        EXTRA_ARGS: -javaagent:/usr/jmx_prometheus_javaagent-0.10.jar=7074:/usr/prom-jmx-agent-kafka-connect-config.yml
+      network_mode: "host"
+      restart: always
+        
   kafka-exporter:
       restart: always
       image: "danielqsj/kafka-exporter"
