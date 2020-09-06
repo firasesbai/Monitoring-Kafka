@@ -27,6 +27,9 @@ The following URLs will be availabe:
 ## To Dos
 The repository could be updated in the future with the following actions to extend and improve the solution:
 - [x] Extend the monitoring to include Zookeeper
+- [x] Extend the monitoring to include Kafka Connect
+  - Using JMX
+  - Using Rest API to restart connectors automatically in case of relatively long outages
 - [ ] Extend the monitoring to include Kafka Producers and Consumers. 
 - [ ] Enable alerting and email notifications for critical metrics in Grafana. This will require the update of some panels since currently only the graph panel visualization supports alerts.
 
