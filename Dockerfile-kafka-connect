@@ -1,0 +1,3 @@
+FROM confluentinc/cp-kafka-connect:5.4.0
+COPY prom-jmx-agent-kafka-connect-config.yml /usr/
+COPY jmx_prometheus_javaagent-0.10.jar /usr/
