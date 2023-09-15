@@ -1,5 +1,7 @@
 # Monitoring-Kafka
 This project provides an easy to deploy kafka monitoring solution using docker and open source tools. Applying [Kafka Exporter](https://github.com/danielqsj/kafka_exporter) and *JMX Exporter* we extract some of the most important metrics needed to help you manage and monitor your running cluster. These metrics are then collected by *Prometheus* in order to be finally visualized in *Grafana* dashboards.
+
+For some theory behind the tools we use, check this blog post [https://www.firasesbai.com/articles/2021/01/01/kafka-monitoring.html](https://www.firasesbai.com/articles/2021/01/01/kafka-monitoring.html) 
 ## Getting started 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 ### Prerequisites
